@@ -1,0 +1,15 @@
+# Python stuff
+__pycache__/
+
+# Env
+env/
+
+# Ignore all data_<lang> directories except english one (source)
+data_*
+!data_en/
+# A script also starts with data_
+!data_managment.py
+
+# Ignore Google API key. To be sure no key is gitted, we ignore all JSON files in the main folder.
+# Feel free to change this rule if you want to git som JSON files from the main folder.
+/*.json

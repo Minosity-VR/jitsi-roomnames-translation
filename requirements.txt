@@ -1,0 +1,4 @@
+google==3.0.0
+google-cloud-translate==2.0.1
+google-api-python-client==2.31.0
+six==1.16.0

@@ -62,7 +62,7 @@ To do it only for your terminal session (you will need to re-enter the command a
 export GOOGLE_APPLICATION_CREDENTIALS='/path/to/the/json/key'
 ```
 
-You can modify the `translation.py` file and set the `test_number` (default -1) to the int value you want if you to execute a non-default behaviour (testing on a small set, comparing singlethreading ant multithreading times...)
+You can modify the `translation.py` file and set the `test_number` (default -1) to the int value you want if you want to execute a non-default behaviour (testing on a small set, comparing singlethreading ant multithreading execution times...)
 
 You still need to have the virtualenv activated to launch the following commands
 
@@ -73,7 +73,8 @@ python3 translation.py -h
 ```
 
 
-Default behaviour: Destination language: French, Input folder: `data_en`, Output folder: `data_fr`, use multithreading
+Default behaviour:\
+Destination language: French, Input folder: `data_en`, Output folder: `data_fr`, use multithreading
 ```bash
 python3 translation.py
 ```
@@ -81,6 +82,6 @@ python3 translation.py
 # Post processing
 Depending on what you want to do after that with the words, you may need to affine the translation, or to remove some of the words.
 
-For instance, this project was created to generate a French dictionnary for the [jitsi-box](https://github.com/openfun/jitsi-box) project. For this reason, I had to remove all words containing special characters, which i did with some `sed` commands such as `sed -i '' '/\u00e7/d' ./data_fr/*.json` (This command works for MACOS. For a GNU distribution, use `sed -i '/\u00e7/d' ./data_fr/*.json`). I also had to check that words' forms (verbs, adverbs, noun) where respected.
+For instance, this project was created to generate a French dictionnary for the [jitsi-box](https://github.com/openfun/jitsi-box) project. For this reason, I had to remove all words containing special characters, which i did with some `sed` commands such as `sed -i '' '/\u00e7/d' ./data_fr/*.json` (This command works for MACOS. With a GNU distribution, use `sed -i '/\u00e7/d' ./data_fr/*.json`). I also had to check that forms (verbs, adverbs, noun) of words were respected.
 
-If you wan't to use an AI or another translating API who can check itself for this, feel free do no anything you want :)
+If you want to use an AI or another translating API who can check itself for this, feel free do no anything you want :)
